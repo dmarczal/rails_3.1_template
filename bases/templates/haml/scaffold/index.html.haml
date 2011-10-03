@@ -1,0 +1,17 @@
+- title model(:count => @<%= plural_table_name %>.size)
+
+%table
+  %tr<% attributes.each do |attribute| %>
+    %th= attr(:<%= attribute.name %>)<% end %>
+  - @<%= plural_table_name %>.each do |<%= singular_table_name %>|
+    %tr{:class => cycle('odd', 'even')}<% attributes.each do |attribute| %>
+      %td
+        = <%= singular_table_name %>.<%= attribute.name %><% end %>
+      %td
+        = link_to t(:show), <%= singular_table_name %>
+      %td
+        = link_to t(:edit), edit_<%= singular_table_name %>_path(<%= singular_table_name %>)
+      %td
+        = link_to t(:destroy), <%= singular_table_name %>, <%=  key_value :confirm, "t(:confirm)"  %>, <%=  key_value :method, ":delete" %>
+%p
+  = link_to t(:new, :model => model), new_<%= singular_table_name %>_path

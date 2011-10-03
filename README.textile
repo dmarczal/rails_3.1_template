@@ -1,0 +1,6 @@
+* Rails 3.1 Template
+  * Haml
+  * scaffold I18n
+
+#h1
+  Author: Diego Marczal

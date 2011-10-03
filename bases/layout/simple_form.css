@@ -1,0 +1,18 @@
+label {
+    display: block;
+    font-weight: bold;
+}
+.error {
+   position: absolute;
+   display: block;
+   margin: -1px 0 0 5px;
+   color: white;
+   padding: 1px 7px;
+   background: rgba(229, 28, 28, 0.8);
+   -moz-border-radius: 7px;
+   -webkit-border-radius: 7px;
+ }
+ 
+form p{
+  margin-top:20px;
+}

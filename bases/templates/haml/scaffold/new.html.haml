@@ -1,0 +1,6 @@
+- title t(:new, :model => model)
+
+= render 'form'
+
+%p
+  = link_to t(:back), <%= plural_table_name %>_path

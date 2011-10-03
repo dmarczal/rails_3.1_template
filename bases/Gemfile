@@ -1,0 +1,41 @@
+source 'http://rubygems.org'
+
+gem "rails", "3.1.0"
+gem "mysql2"
+
+gem 'sqlite3'
+gem 'jquery-rails'
+gem "therubyracer", :require => 'v8'
+
+gem "haml"
+gem "simple_form"
+
+group :assets do
+  gem 'sass-rails', " ~> 3.1.0"
+  gem 'coffee-rails', "~> 3.1.0"
+  gem 'uglifier'
+end
+
+group :development do
+  gem "thin"
+  gem "nifty-generators"
+  gem "rails3-generators", :git => "https://github.com/indirect/rails3-generators.git"
+  gem "haml-rails"
+  gem "capistrano"
+end
+
+gem "rspec-rails", :group => [:test, :development]
+group :test do
+  gem "factory_girl_rails"
+  gem "capybara"
+  gem "guard-rspec"
+  gem "spork", "> 0.9.0.rc"
+  gem "guard-spork"
+end
+
+# To use debugger
+# gem 'ruby-debug19', :require => 'ruby-debug'
+group :test do
+  # Pretty printed test output
+  gem 'turn', :require => false
+end

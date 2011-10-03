@@ -1,0 +1,10 @@
+- editing
+
+= render 'form'
+
+%p
+  = link_to t(:show), @<%= singular_table_name %>
+  |
+  = link_to t(:back), <%= plural_table_name %>_path
+  |
+  = link_to t(:destroy), @<%= singular_table_name %>, confirm: t(:confirm), method: :delete
