@@ -50,6 +50,18 @@ inside "config" do
   get "simple_form.rb", "config/initializers", "initializers"
 end
 
+run "mkdir spec"
+inside "spec" do
+  get "spec_helper.rb", "spec"
+  get "mailer_macros.rb", "spec", "support"
+end
+
+file ".rspec" do
+  <<-RSPEC
+    --color
+  RSPEC
+end
+
 application <<-LOCALE
     config.i18n.default_locale = "pt-BR"
 LOCALE
